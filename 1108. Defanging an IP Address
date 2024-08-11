@@ -1,0 +1,9 @@
+class Solution:
+    def defangIPaddr(self, address: str) -> str:
+        defanged_address = list(address)
+
+        for i in range(len(defanged_address)):
+            if defanged_address[i] == '.':
+                defanged_address[i] = '[.]'
+
+        return ''.join(defanged_address)
